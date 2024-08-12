@@ -1,5 +1,6 @@
-const fs = require("fs");
 import { sql } from "@vercel/postgres";
+const fs = require("fs");
+
 addComp();
 function generate() {
   let number = document.getElementById("number").value;

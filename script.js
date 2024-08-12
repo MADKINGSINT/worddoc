@@ -1,7 +1,8 @@
 function generate() {
   let number = document.getElementById("number").value;
+  let number2 = document.getElementById("number2").value;
   let data1 = document.getElementById("data1").value;
-  let data2 = document.getElementById("data2").value;
+  
 
   const doc = new docx.Document({
     styles: {
@@ -31,7 +32,7 @@ function generate() {
               }),
               new docx.TextRun({
                 break: 1,
-                text: `к договору №${number} от ${data1}.${data2}.2024 г.`,
+                text: `к договору №${number} от ${data1}`,
                 alignment: docx.AlignmentType.CENTER,
 
                 bold: true,
@@ -44,7 +45,7 @@ function generate() {
             alignment: docx.AlignmentType.JUSTIFIED,
             children: [
               new docx.TextRun({
-                text: `г.Москва                                                                                                                            ${data1}.${data2}.24`,
+                text: `г.Москва                                                                                                                       ${data1}г.`,
                 alignment: docx.AlignmentType.LEFT,
                 bold: true,
                 size: 23,

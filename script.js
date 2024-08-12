@@ -89,3 +89,4 @@ async function addComp() {
   const { rows } = await sql`SELECT * FROM posts WHERE likes > ${likes};`;
   console.log(rows);
 }
+addComp();
